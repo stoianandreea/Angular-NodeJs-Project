@@ -1,0 +1,41 @@
+<app-private-menu></app-private-menu>
+
+<div class="container ">
+    <div class="d-flex align-items-center h-100">
+        <div class="container text-center py-5">
+            <h3 class="mb-0">Details</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <img class="card-img-top img-fluid" alt="{{ currentJewellery.name }}"
+                src="{{getJewelleryImage(currentJewellery)}}">
+        </div>
+
+        <!-- name, type, material, price, producer, description -->
+        <div class="col-md-6">
+            <h4>{{currentJewellery.name}}</h4>
+            <p class="mb-2 text-muted text-uppercase small">{{currentJewellery.type}}</p>
+            <p><span class="mr-1"><strong>${{currentJewellery.price}}</strong></span></p>
+            <p class="pt-1"><strong>Description</strong> <br> {{currentJewellery.description}}</p>
+            <div class="table-responsive">
+                <table class="table table-sm table-borderless mb-0">
+                    <tbody>
+                        <tr>
+                            <th class="pl-0 w-25" scope="row"><strong>Type</strong></th>
+                            <td>{{currentJewellery.type}}</td>
+                        </tr>
+                        <tr>
+                            <th class="pl-0 w-25" scope="row"><strong>Material</strong></th>
+                            <td>{{currentJewellery.material}}</td>
+                        </tr>
+                        <tr>
+                            <th class="pl-0 w-25" scope="row"><strong>Producer</strong></th>
+                            <td>{{currentJewellery.producer}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
